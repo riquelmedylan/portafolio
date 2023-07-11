@@ -1,0 +1,11 @@
+:root {
+  --bg-color: hsl(0deg 0% 92.91%);
+  --border-board: hsl(0deg 0% 62.99%);
+  --primary-color: hsl(0, 0%, 10%);
+}
+
+[data-theme="dark"] {
+  --bg-color: hsl(0, 0%, 6%);
+  --border-board: hsl(0, 0%, 96%);
+  --primary-color: hsl(0, 0%, 90%);
+}

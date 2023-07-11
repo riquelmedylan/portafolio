@@ -1,0 +1,40 @@
+@import "./variables.css";
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-color);
+  font-family: "Montserrat", sans-serif;
+}
+
+.board {
+  border: 1px solid;
+  border-color: hsl(0deg 0% 62.99%);
+  min-height: 96vh;
+  width: 90%;
+  padding: 15px;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  position: absolute;
+  clip-path: circle(128% at -70% 93%);
+  height: 100%;
+  top: 0;
+  background-color: red;
+  left: 0;
+}
+
+.board [data-theme="dark"] {
+  border-color: hsl(0, 0%, 96%);
+}
+
+@media (max-width: 566px) {
+  .board {
+    margin: 15px 0;
+  }
+}
