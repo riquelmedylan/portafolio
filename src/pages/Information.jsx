@@ -21,7 +21,7 @@ export default function Information() {
       <p className="title">Experiencia</p>
       <div className="containerThree">
         <div className="container__info">
-          <Glft glft={"/public/assets/yoy.gltf"} />
+          <Glft glft={"/assets/yoy.gltf"} />
           <div className="information">
             <p className="name__job">ICBC - YOY</p>
             <p className="date">2022 - Actualidad</p>
