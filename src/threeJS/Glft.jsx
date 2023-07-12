@@ -41,6 +41,7 @@ export const Glft = ({ glft }) => {
     loader.setDRACOLoader(dracoLoader);
     console.log(glft);
     loader.load(glft, function (gltf) {
+      console.log(glft);
       model = gltf.scene;
       scene.add(gltf.scene);
     });
