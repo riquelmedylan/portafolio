@@ -1,8 +1,9 @@
 import "../styles/pages/information.css";
 import { motion } from "framer-motion";
 import { lazy } from "react";
-
-const Glft = lazy(() => import("../threeJS/Glft"));
+import { Glft } from "../threeJS/Glft";
+import MobyGltf from "../assets/moby.gltf";
+import YoyGltf from "../assets/yoy.gltf";
 const Skills = lazy(() => import("../components/Skills"));
 
 export default function Information() {
@@ -20,7 +21,7 @@ export default function Information() {
       <p className="title">Experiencia</p>
       <div className="containerThree">
         <div className="container__info">
-          <Glft glft="assets/yoy.gltf" />
+          <Glft glft={"src/assets/yoy.glb"} />
           <div className="information">
             <p className="name__job">ICBC - YOY</p>
             <p className="date">2022 - Actualidad</p>
@@ -28,7 +29,7 @@ export default function Information() {
           </div>
         </div>
         <div className="container__info">
-          <Glft glft="assets/moby.gltf" />
+          <Glft glft={"src/assets/moby.glb"} />
           <div className="information">
             <p className="name__job">MOBY DIGITAL</p>
             <p className="date">2022 - Actualidad</p>

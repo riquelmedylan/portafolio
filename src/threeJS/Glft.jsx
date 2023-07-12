@@ -4,7 +4,7 @@ import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-export default function Glft({ glft }) {
+export const Glft = ({ glft }) => {
   let model;
   const container = useRef(null);
   const scene = new THREE.Scene();
@@ -67,4 +67,4 @@ export default function Glft({ glft }) {
   }, []);
 
   return <div ref={container}></div>;
-}
+};
