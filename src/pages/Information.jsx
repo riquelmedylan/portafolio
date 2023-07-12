@@ -2,8 +2,8 @@ import "../styles/pages/information.css";
 import { motion } from "framer-motion";
 import { lazy } from "react";
 import { Glft } from "../threeJS/Glft";
-import MobyGltf from "../assets/moby.gltf";
-import YoyGltf from "../assets/yoy.gltf";
+// import MobyGltf from "../assets/moby.gltf";
+// import YoyGltf from "../assets/yoy.gltf";
 const Skills = lazy(() => import("../components/Skills"));
 
 export default function Information() {
