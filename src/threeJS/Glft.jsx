@@ -18,7 +18,6 @@ export const Glft = ({ glft }) => {
 
   camera.position.set(0, 0, 10);
   camera.zoom = false;
-  console.log(camera.zoom);
 
   renderer.setSize(256, 225);
 
@@ -39,21 +38,10 @@ export const Glft = ({ glft }) => {
 
   const handlerLoader = () => {
     loader.setDRACOLoader(dracoLoader);
-    console.log(glft);
-    loader.load(
-      glft,
-      function (gltf) {
-        model = gltf.scene;
-        scene.add(gltf.scene);
-      },
-      function (xhr) {
-        console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-      },
-      // called when loading has errors
-      function (error) {
-        console.error(error);
-      }
-    );
+    loader.load(glft, function (gltf) {
+      model = gltf.scene;
+      scene.add(gltf.scene);
+    });
   };
 
   handlerControlsOrbits();
