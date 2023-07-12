@@ -11,7 +11,7 @@ export const Glft = ({ glft }) => {
   const camera = new THREE.PerspectiveCamera(20, 0.8, 0.1, 1000);
   const renderer = new THREE.WebGLRenderer({ alpha: true });
   const controls = new OrbitControls(camera, renderer.domElement);
-  const loader = new GLTFLoader()
+  const loader = new GLTFLoader();
 
   const dracoLoader = new DRACOLoader();
   dracoLoader.setDecoderPath("jsm/libs/draco/gltf/");
