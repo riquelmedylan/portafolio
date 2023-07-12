@@ -4,7 +4,7 @@ import { lazy } from "react";
 import { Glft } from "../threeJS/Glft";
 const Skills = lazy(() => import("../components/Skills"));
 
-export default function Information() {
+export const Information = () => {
   const YoyGltf = "/assets/yoy.gltf";
   const MobyGltf = "/assets/moby.gltf";
 
@@ -41,4 +41,4 @@ export default function Information() {
       <Skills />
     </motion.section>
   );
-}
+};
