@@ -21,7 +21,7 @@ export default function Information() {
       <p className="title">Experiencia</p>
       <div className="containerThree">
         <div className="container__info">
-          <Glft glft={"../public/assets/yoy.glb"} />
+          <Glft glft={"/public/assets/yoy.glb"} />
           <div className="information">
             <p className="name__job">ICBC - YOY</p>
             <p className="date">2022 - Actualidad</p>
@@ -29,7 +29,7 @@ export default function Information() {
           </div>
         </div>
         <div className="container__info">
-          <Glft glft={"../public/assets/moby.glb"} />
+          <Glft glft={"/public/assets/moby.glb"} />
           <div className="information">
             <p className="name__job">MOBY DIGITAL</p>
             <p className="date">2022 - Actualidad</p>
