@@ -11,7 +11,7 @@ export const Glft = ({ glft }) => {
   const camera = new THREE.PerspectiveCamera(20, 0.8, 0.1, 1000);
   const renderer = new THREE.WebGLRenderer({ alpha: true });
   const controls = new OrbitControls(camera, renderer.domElement);
-  const loader = new GLTFLoader().setPath( '/public/assets' );
+  const loader = new GLTFLoader()
 
   const dracoLoader = new DRACOLoader();
   dracoLoader.setDecoderPath("jsm/libs/draco/gltf/");
@@ -40,10 +40,20 @@ export const Glft = ({ glft }) => {
   const handlerLoader = () => {
     loader.setDRACOLoader(dracoLoader);
     console.log(glft);
-    loader.load(glft, function (gltf) {
-      model = gltf.scene;
-      scene.add(gltf.scene);
-    });
+    loader.load(
+      glft,
+      function (gltf) {
+        model = gltf.scene;
+        scene.add(gltf.scene);
+      },
+      function (xhr) {
+        console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+      },
+      // called when loading has errors
+      function (error) {
+        console.log("An error happened");
+      }
+    );
   };
 
   handlerControlsOrbits();
