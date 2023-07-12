@@ -29,7 +29,7 @@ export default function Information() {
           </div>
         </div>
         <div className="container__info">
-          <Glft glft={"/public/assets/moby.gltf"} />
+          <Glft glft={"https://portafolio-rd.vercel.app/public/assets/moby.gltf"} />
           <div className="information">
             <p className="name__job">MOBY DIGITAL</p>
             <p className="date">2022 - Actualidad</p>
