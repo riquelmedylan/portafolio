@@ -1,10 +1,10 @@
 import "../styles/pages/information.css";
 import { motion } from "framer-motion";
-import { lazy } from "react";
+import { ReactElement, lazy } from "react";
 import { Glft } from "../threeJS/Glft";
 const Skills = lazy(() => import("../components/Skills"));
 
-export default function Information() {
+export default function Information(): ReactElement {
   const YoyGltf = "/assets/yoy.gltf";
   const MobyGltf = "/assets/moby.gltf";
 

@@ -11,8 +11,8 @@ const ThemeProvider = ({ children }: BaseLayoutProps): ReactElement => {
   const [theme, setTheme] = useState<ThemeState>("");
 
   useEffect(() => {
-    if (localStorage.getItem("theme") === "dark" || "ligth") {
-      setTheme(localStorage.getItem("theme")!.slice(1, -1));
+    if (localStorage.getItem("theme") === "ligth" && "dark") {
+      setTheme(localStorage.getItem("theme")!);
       changeDataTheme();
     } else {
       whoTheme();

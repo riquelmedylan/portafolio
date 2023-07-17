@@ -1,10 +1,10 @@
 import style from "../styles/modules/header.module.css";
-import { lazy } from "react";
+import { lazy,ReactElement } from "react";
 
 const Profile = lazy(() => import("./Profile"));
 const Navbar = lazy(() => import("./Navbar"));
 
-export default function Header() {
+export default function Header(): ReactElement {
   return (
     <header className={style.header}>
       <Profile />

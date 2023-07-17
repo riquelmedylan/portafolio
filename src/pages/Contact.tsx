@@ -1,8 +1,9 @@
 import "../styles/pages/contact.css";
 import { motion } from "framer-motion";
+import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-export default function Contact() {
+export default function Contact(): ReactElement {
   return (
     <motion.div
       initial={{ opacity: 0 }}

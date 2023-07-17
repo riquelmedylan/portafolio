@@ -1,7 +1,8 @@
-import { Link, useLocation } from "react-router-dom";
 import style from "../styles/modules/header.module.css";
+import { Link, useLocation } from "react-router-dom";
+import { ReactElement } from "react";
 
-export default function Navbar() {
+export default function Navbar(): ReactElement {
   const { pathname } = useLocation();
 
   return (
