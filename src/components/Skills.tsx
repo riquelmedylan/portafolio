@@ -1,10 +1,9 @@
-import "../styles/pages/information.css";
 import { ReactElement } from "react";
 
 export default function Skills(): ReactElement {
   return (
     <section className="skills">
-      <p className="title">Habilidades</p>
+      <p className="titleInfo">Habilidades</p>
       <div className="container__skills">
         <p>● React</p>
         <p>● Typescript</p>
