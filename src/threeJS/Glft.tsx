@@ -1,12 +1,15 @@
-import { useEffect, useRef } from "react";
+type EffectCallback = () =>
+  | HTMLCanvasElement
+  | (() => HTMLCanvasElement | undefined);
+import { ReactElement, useEffect, useRef } from "react";
 import * as THREE from "three";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-export const Glft = ({ glft }) => {
+export const Glft = ({ glft }): ReactElement => {
   let model;
-  const container = useRef(null);
+  const container = useRef<HTMLDivElement | null>(null);
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(20, 0.8, 0.1, 1000);
   const renderer = new THREE.WebGLRenderer({ alpha: true });
@@ -17,11 +20,11 @@ export const Glft = ({ glft }) => {
   dracoLoader.setDecoderPath("jsm/libs/draco/gltf/");
 
   camera.position.set(0, 0, 10);
-  camera.zoom = false;
+  camera.zoom = 9;
 
   renderer.setSize(256, 225);
 
-  const ligth = new THREE.AmbientLight(0xffffff, 0.85, 100);
+  const ligth = new THREE.AmbientLight(0xffffff, 0.85);
   ligth.position.set(0, 1, 1);
   ligth.castShadow = true;
 
@@ -56,12 +59,13 @@ export const Glft = ({ glft }) => {
     controls.maxPolarAngle = Math.PI / 2;
     renderer.render(scene, camera);
   }
-
   useEffect(() => {
     animate();
 
-    container.current.appendChild(renderer.domElement);
-    return () => container.current?.removeChild(renderer.domElement);
+    container.current!.appendChild(renderer.domElement);
+    return () => {
+      container.current?.removeChild(renderer.domElement);
+    };
   }, []);
 
   return <div ref={container}></div>;

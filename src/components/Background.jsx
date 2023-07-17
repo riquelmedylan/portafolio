@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Sketch from "react-p5";
 
-export default function Background() {
+export const Background = () => {
   const bgRef = useRef(null);
   let p5State;
   let time, theme;
@@ -146,4 +146,4 @@ export default function Background() {
       <Sketch setup={setup} draw={draw} />
     </div>
   );
-}
+};

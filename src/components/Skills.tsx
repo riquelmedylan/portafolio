@@ -1,4 +1,6 @@
-export default function Skills() {
+import { ReactElement } from "react";
+
+export default function Skills(): ReactElement {
   return (
     <section className="skills">
       <p className="title">Habilidades</p>
