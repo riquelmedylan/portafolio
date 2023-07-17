@@ -1,13 +1,18 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, ReactElement } from "react";
+import {
+  BaseLayoutProps,
+  ThemeContextType,
+  ThemeState,
+} from "../types/ThemeContext";
 
-const ThemeContext = createContext();
+const ThemeContext = createContext<ThemeContextType | null>(null);
 
-const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState();
+const ThemeProvider = ({ children }: BaseLayoutProps): ReactElement => {
+  const [theme, setTheme] = useState<ThemeState>("");
 
   useEffect(() => {
-    if (localStorage.getItem("theme")) {
-      setTheme(JSON.stringify(localStorage.getItem("theme")).slice(1, -1));
+    if (localStorage.getItem("theme") === "dark" || "ligth") {
+      setTheme(localStorage.getItem("theme")!.slice(1, -1));
       changeDataTheme();
     } else {
       whoTheme();

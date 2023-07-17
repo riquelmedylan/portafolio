@@ -1,7 +1,8 @@
+import { ReactElement } from "react";
 import style from "../styles/pages/home.module.css";
 import { motion } from "framer-motion";
 
-export default function Home() {
+export default function Home(): ReactElement {
   return (
     <motion.div
       initial={{ opacity: 0 }}
