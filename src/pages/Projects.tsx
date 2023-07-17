@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Project } from "../components/Project";
 import { ReactElement } from "react";
 
-export default function Projects():ReactElement {
+export default function Projects(): ReactElement {
   return (
     <motion.section
       initial={{ opacity: 0 }}

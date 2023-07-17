@@ -18,7 +18,7 @@
   text-align: end;
 }
 
-.project__link {
+.projectLink {
   display: flex;
   justify-content: end;
 }

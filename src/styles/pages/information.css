@@ -7,7 +7,7 @@
   margin-top: 15px;
 }
 
-.container__info {
+.containerInfo {
   margin-bottom: 20px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .titleInfo [data-theme="dark"] {
-  text-shadow: white 0px 0 24px;
+  text-shadow: rgb(255, 255, 255) 0px 0 24px;
 }
 
 .information {
@@ -55,12 +55,6 @@
   color: var(--primary-color);
   font-size: 14px;
   font-weight: 600;
-}
-
-@media (max-width: 539px) {
-  .titleInfo {
-    text-align: end;
-  }
 }
 
 @media (min-width: 540px) {
