@@ -1,9 +1,9 @@
-import "../styles/pages/projects.css";
+import style from "../styles/pages/projects.module.css";
 import { motion } from "framer-motion";
 import { Project } from "../components/Project";
 import { ReactElement } from "react";
 
-export default function Projects():ReactElement {
+export default function Projects(): ReactElement {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -13,9 +13,9 @@ export default function Projects():ReactElement {
         duration: 1,
       }}
       exit={{ opacity: 0 }}
-      className="section__projects"
+      className={style.sectionProjects}
     >
-      <h2 className="title">Proyectos</h2>
+      <h2 className={style.title}>Proyectos</h2>
       <Project
         url={"https://riquelmedylan.github.io/ProyectoApiRickAndMorty/"}
         name={"Rick and Morty"}

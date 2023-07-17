@@ -1,4 +1,4 @@
-import "../styles/pages/information.css";
+import style from "../styles/pages/information.module.css";
 import { motion } from "framer-motion";
 import { ReactElement, lazy } from "react";
 import { Glft } from "../threeJS/Glft";
@@ -17,24 +17,24 @@ export const Information = (): ReactElement => {
         duration: 1,
       }}
       exit={{ opacity: 0 }}
-      className="container"
+      className={style.container}
     >
-      <p className="title">Experiencia</p>
-      <div className="containerThree">
-        <div className="container__info">
+      <p className={style.title}>Experiencia</p>
+      <div className={style.containerThree}>
+        <div className={style.containerInfo}>
           <Glft glft={YoyGltf} />
-          <div className="information">
-            <p className="name__job">ICBC - YOY</p>
-            <p className="date">2022 - Actualidad</p>
-            <p className="position">Angular Developer</p>
+          <div className={style.information}>
+            <p className={style.name__job}>ICBC - YOY</p>
+            <p className={style.date}>2022 - Actualidad</p>
+            <p className={style.position}>Angular Developer</p>
           </div>
         </div>
-        <div className="container__info">
+        <div className={style.containerInfo}>
           <Glft glft={MobyGltf} />
-          <div className="information">
-            <p className="name__job">MOBY DIGITAL</p>
-            <p className="date">2022 - Actualidad</p>
-            <p className="position">Angular Developer</p>
+          <div className={style.information}>
+            <p className={style.name__job}>MOBY DIGITAL</p>
+            <p className={style.date}>2022 - Actualidad</p>
+            <p className={style.position}>Angular Developer</p>
           </div>
         </div>
       </div>

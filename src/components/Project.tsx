@@ -1,3 +1,4 @@
+import style from "../styles/pages/projects.module.css";
 import { Link } from "react-router-dom";
 import { ReactElement } from "react";
 import { ProjectT } from "../types/Project";
@@ -8,10 +9,10 @@ export const Project = ({
   technologies,
 }: ProjectT): ReactElement => {
   return (
-    <div className="project__link">
-      <Link target="_blank" to={url} className="link">
-        <span className="name">{name}</span>
-        <span className="technology">{technologies}</span>
+    <div className={style.projectLink}>
+      <Link target="_blank" to={url} className={style.link}>
+        <span className={style.name}>{name}</span>
+        <span className={style.technology}>{technologies}</span>
       </Link>
     </div>
   );
