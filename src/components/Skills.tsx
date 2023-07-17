@@ -1,3 +1,4 @@
+import "../styles/pages/information.css";
 import { ReactElement } from "react";
 
 export default function Skills(): ReactElement {
