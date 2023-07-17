@@ -19,7 +19,7 @@ export const Information = (): ReactElement => {
       exit={{ opacity: 0 }}
       className="container"
     >
-      <p className="title">Experiencia</p>
+      <p className="titleInfo">Experiencia</p>
       <div className="containerThree">
         <div className="container__info">
           <Glft glft={YoyGltf} />

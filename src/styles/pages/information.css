@@ -11,14 +11,14 @@
   margin-bottom: 20px;
 }
 
-.title {
+.titleInfo {
   font-weight: 700;
   font-size: 18px;
   color: var(--primary-color);
   text-shadow: rgb(0, 0, 0) 0px 0 30px;
 }
 
-.title [data-theme="dark"] {
+.titleInfo [data-theme="dark"] {
   text-shadow: white 0px 0 24px;
 }
 
@@ -58,7 +58,7 @@
 }
 
 @media (max-width: 539px) {
-  .title {
+  .titleInfo {
     text-align: end;
   }
 }
@@ -79,7 +79,7 @@
 }
 
 @media (min-width: 940px) {
-  .title {
+  .titleInfo {
     text-align: start;
   }
   .container__info,
