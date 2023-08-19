@@ -1,12 +1,32 @@
 import "../styles/pages/information.css";
 import { motion } from "framer-motion";
-import { ReactElement, lazy } from "react";
+import { ReactElement, lazy, useEffect, useMemo, useState } from "react";
 import { Glft } from "../threeJS/Glft";
 const Skills = lazy(() => import("../components/Skills"));
+enum glft {
+  YoyWhite = "/assets/yoyWhite.gltf",
+  YoyBlack = "/assets/yoyBlack.gltf",
+  MobyWhite = "/assets/mobyWhite.gltf",
+  MobyBlack = "/assets/mobyBlack.gltf",
+}
 
 export const Information = (): ReactElement => {
-  const YoyGltf = "/assets/yoy.gltf";
-  const MobyGltf = "/assets/moby.gltf";
+  const [theme, setTheme] = useState<any>(localStorage.getItem("theme"));
+
+  const changee = () => {
+    window.addEventListener("click", (event: any) => {
+      if (event.target.id === "button") {
+        theme === "dark" ? setTheme("ligth") : setTheme("dark");
+      }
+    });
+  };
+
+  useEffect(() => {
+    changee();
+    return () => {
+      window.removeEventListener("click", changee, false);
+    };
+  }, [theme]);
 
   return (
     <motion.section
@@ -22,7 +42,8 @@ export const Information = (): ReactElement => {
       <p className="titleInfo">Experiencia</p>
       <div className="containerThree">
         <div className="container__info">
-          <Glft glft={YoyGltf} />
+          {theme === "dark" ? <Glft glft={glft.YoyWhite} /> : null}
+          {theme === "ligth" ? <Glft glft={glft.YoyBlack} /> : null}
           <div className="information">
             <p className="name__job">ICBC - YOY</p>
             <p className="date">2022 - Actualidad</p>
@@ -30,7 +51,8 @@ export const Information = (): ReactElement => {
           </div>
         </div>
         <div className="container__info">
-          <Glft glft={MobyGltf} />
+          {theme === "dark" ? <Glft glft={glft.MobyWhite} /> : null}
+          {theme === "ligth" ? <Glft glft={glft.MobyBlack} /> : null}
           <div className="information">
             <p className="name__job">MOBY DIGITAL</p>
             <p className="date">2022 - Actualidad</p>

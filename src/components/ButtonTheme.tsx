@@ -6,7 +6,7 @@ export default function ButtonTheme(): ReactElement {
   const { theme, changeTheme } = useTheme()!;
 
   return (
-    <button className={style.button} onClick={changeTheme}>
+    <button id="button" className={style.button} onClick={changeTheme}>
       {theme === "dark" ? "ligth" : "dark"}
     </button>
   );
