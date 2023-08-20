@@ -90,7 +90,7 @@ export const Background = () => {
     const { width, height } = percentage();
     p5State = p5;
     deleteAllChild();
-    theme = localStorage.getItem("theme") === "ligth" ? "ligth" : "dark";
+    theme = localStorage.getItem("theme");
     time += 0.01;
     theme === "dark" ? p5.background(15, 15, 15) : p5.background(237, 237, 237);
     setVariablesDraw(p5, width, height);

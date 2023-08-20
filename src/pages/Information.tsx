@@ -1,30 +1,31 @@
 import "../styles/pages/information.css";
 import { motion } from "framer-motion";
-import { ReactElement, lazy, useEffect, useMemo, useState } from "react";
-import { Glft } from "../threeJS/Glft";
+import { ReactElement, lazy, useEffect, useState } from "react";
+import Glft from "../components/gltf/Glft";
+import Camera from "../components/gltf/Camera";
+import { MobyBlack } from "../components/gltf/MobyBlack";
+import { YoyWhite } from "../components/gltf/YoyWhite";
+import { YoyBlack } from "../components/gltf/YoyBlack";
+import { MobyWhite } from "../components/gltf/MobyWhite";
 const Skills = lazy(() => import("../components/Skills"));
-enum glft {
-  YoyWhite = "/assets/yoyWhite.gltf",
-  YoyBlack = "/assets/yoyBlack.gltf",
-  MobyWhite = "/assets/mobyWhite.gltf",
-  MobyBlack = "/assets/mobyBlack.gltf",
-}
 
 export const Information = (): ReactElement => {
-  const [theme, setTheme] = useState<any>(localStorage.getItem("theme"));
+  const [theme, setTheme] = useState<string | null>(
+    localStorage.getItem("theme")
+  );
 
-  const changee = () => {
-    window.addEventListener("click", (event: any) => {
-      if (event.target.id === "button") {
-        theme === "dark" ? setTheme("ligth") : setTheme("dark");
-      }
-    });
+  const changeTheme = () => {
+    window.addEventListener(
+      "click",
+      (event: any) =>
+        event.target.id === "button" && setTheme(localStorage.getItem("theme"))
+    );
   };
 
   useEffect(() => {
-    changee();
+    changeTheme();
     return () => {
-      window.removeEventListener("click", changee, false);
+      window.removeEventListener("click", changeTheme, false);
     };
   }, [theme]);
 
@@ -42,8 +43,10 @@ export const Information = (): ReactElement => {
       <p className="titleInfo">Experiencia</p>
       <div className="containerThree">
         <div className="container__info">
-          {theme === "dark" ? <Glft glft={glft.YoyWhite} /> : null}
-          {theme === "ligth" ? <Glft glft={glft.YoyBlack} /> : null}
+          <Glft>
+            <Camera position={[-10, 0, 80]} />
+            {theme === "dark" ? <YoyWhite /> : <YoyBlack />}
+          </Glft>
           <div className="information">
             <p className="name__job">ICBC - YOY</p>
             <p className="date">2022 - Actualidad</p>
@@ -51,8 +54,10 @@ export const Information = (): ReactElement => {
           </div>
         </div>
         <div className="container__info">
-          {theme === "dark" ? <Glft glft={glft.MobyWhite} /> : null}
-          {theme === "ligth" ? <Glft glft={glft.MobyBlack} /> : null}
+          <Glft>
+            <Camera position={[0, 0, 50]} />
+            {theme === "dark" ? <MobyWhite /> : <MobyBlack />}
+          </Glft>
           <div className="information">
             <p className="name__job">MOBY DIGITAL</p>
             <p className="date">2022 - Actualidad</p>

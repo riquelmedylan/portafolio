@@ -63,12 +63,32 @@
     justify-content: space-between;
     align-items: center;
   }
+ 
+}
+
+@media (min-width: 540px) and (max-width: 940px) {
+  .container {
+    height: 610px;
+  }
+
+  .skills {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
 }
 
 @media (min-width: 780px) {
   .container__info {
     display: flex;
     justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 940px) {
+  .container__info {
+    margin-bottom: 40px;
   }
 }
 
