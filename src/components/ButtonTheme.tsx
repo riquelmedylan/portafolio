@@ -7,7 +7,7 @@ export default function ButtonTheme(): ReactElement {
 
   return (
     <button id="button" className={style.button} onClick={changeTheme}>
-      {theme === "dark" ? "ligth" : "dark"}
+      {theme === "dark" ? "light" : "dark"}
     </button>
   );
 }
