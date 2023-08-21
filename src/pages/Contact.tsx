@@ -15,16 +15,16 @@ export default function Contact(): ReactElement {
       exit={{ opacity: 0 }}
       className="container__contact"
     >
-      <Link to="https://www.linkedin.com/in/dylan-riquelme03907425123/">
+      <Link target="blank" to="https://www.linkedin.com/in/dylan-riquelme03907425123/">
         <i className="fa-brands fa-linkedin-in"></i>
       </Link>
-      <Link to="https://www.instagram.com/dyriquelme_/">
+      <Link target="blank" to="https://www.instagram.com/dyriquelme_/">
         <i className="fa-brands fa-instagram"></i>
       </Link>
-      <Link to="https://github.com/riquelmedylan">
+      <Link target="blank" to="https://github.com/riquelmedylan">
         <i className="fa-brands fa-github-alt"></i>
       </Link>
-      <Link to="mailto:riquelmedylan0@gmail.com?Subject=Contacto">
+      <Link target="blank" to="mailto:riquelmedylan0@gmail.com?Subject=Contacto">
         <i className="fa-solid fa-envelope"></i>
       </Link>
     </motion.div>
