@@ -1,14 +1,14 @@
 @import "../variables.css";
 
-.container__contact {
+.footer {
   position: absolute;
   bottom: 1%;
-  right: 2%;
+  left: 3%;
   display: flex;
   column-gap: 20px;
 }
 
-.container__contact > a {
+.footer > a {
   color: var(--primary-color);
   font-size: 1.5em;
 }

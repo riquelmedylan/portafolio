@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Contact(): ReactElement {
   return (
-    <motion.div
+    <motion.footer
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
@@ -13,7 +13,7 @@ export default function Contact(): ReactElement {
         duration: 1,
       }}
       exit={{ opacity: 0 }}
-      className="container__contact"
+      className="footer"
     >
       <Link target="blank" to="https://www.linkedin.com/in/dylan-riquelme03907425123/">
         <i className="fa-brands fa-linkedin-in"></i>
@@ -27,6 +27,6 @@ export default function Contact(): ReactElement {
       <Link target="blank" to="mailto:riquelmedylan0@gmail.com?Subject=Contacto">
         <i className="fa-solid fa-envelope"></i>
       </Link>
-    </motion.div>
+    </motion.footer>
   );
 }
