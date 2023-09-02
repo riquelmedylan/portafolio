@@ -13,7 +13,6 @@ export const sendEmail = (data: Email) => {
   fetch(`${import.meta.env.VITE_URL_BE}/send-email`, {
     method: "POST",
     headers: {
-      "Access-Control-Allow-Origin": "https://portafolio-rd.vercel.app/contact",
       "Content-Type": "application/json",
     },
 
