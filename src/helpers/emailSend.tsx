@@ -9,7 +9,7 @@ export const sendEmail = (data: Email) => {
     subject: data.asunto,
     text: data.mensaje,
   };
-  fetch(`${import.meta.env.REACT_APP_URL_BE}/send-email`, {
+  fetch(`${import.meta.env.VITE_URL_BE}/send-email`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
