@@ -1,4 +1,3 @@
-import env from "react-dotenv";
 type Email = {
   email: string;
   asunto: string;
@@ -10,7 +9,7 @@ export const sendEmail = (data: Email) => {
     subject: data.asunto,
     text: data.mensaje,
   };
-  fetch(`${env.URL_BE}/send-email`, {
+  fetch(`${import.meta.env.REACT_APP_URL_BE}/send-email`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
