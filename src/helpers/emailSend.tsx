@@ -9,6 +9,7 @@ export const sendEmail = (data: Email) => {
     subject: data.asunto,
     text: data.mensaje,
   };
+  console.log(import.meta.env.VITE_URL_BE);
   fetch(`${import.meta.env.VITE_URL_BE}/send-email`, {
     method: "POST",
     headers: {
