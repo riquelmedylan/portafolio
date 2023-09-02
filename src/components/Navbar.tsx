@@ -21,7 +21,7 @@ export default function Navbar(): ReactElement {
         </Link>
       </li>
       <li>
-        <Link to="/contact">{pathname === "/contact" ? "●" : "Conctacto"}</Link>
+        <Link to="/contact">{pathname === "/contact" ? "●" : "Contacto"}</Link>
       </li>
     </ol>
   );

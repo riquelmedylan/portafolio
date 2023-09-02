@@ -1,0 +1,10 @@
+@import "../variables.css";
+
+.text {
+  width: 200px;
+  padding: 5px;
+  font-size: 0.8em;
+  font-weight: 600;
+  background-color: var(--border-form);
+  color: var(--bg-color);
+}

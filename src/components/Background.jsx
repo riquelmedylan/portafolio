@@ -16,7 +16,7 @@ export const Background = () => {
   const setup = (p5, canvasParentRef) => {
     const { width, height } = percentage();
     p5.createCanvas(width, height).parent(canvasParentRef);
-
+    Points.splice(0, Points.length);
     for (let i = 0; i < 180; i += 1) {
       Points.push({
         ox: 0,
@@ -129,7 +129,7 @@ export const Background = () => {
     p5State && p5State.resizeCanvas(width, height);
   });
 
-  setInterval(createLines, 1500);
+  setInterval(createLines, 2300);
 
   return (
     <div
