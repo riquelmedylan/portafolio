@@ -1,6 +1,5 @@
 import "../styles/pages/contact.css";
 import React from "react";
-import Form from "../components/Form";
 import { motion } from "framer-motion";
 import { ReactElement } from "react";
 import { Link } from "react-router-dom";
@@ -8,7 +7,6 @@ import { Link } from "react-router-dom";
 export default function Contact(): ReactElement {
   return (
     <>
-      <Form />
       <motion.footer
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
