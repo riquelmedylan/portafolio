@@ -26,16 +26,6 @@ export default function Projects(): ReactElement {
         name={"Weather App"}
         technologies={"React / Sass"}
       />
-      <Project
-        url={"https://journalapp-rd.netlify.app/auth/login"}
-        name={"Journal App"}
-        technologies={"React / Sass / Firebase"}
-      />
-      <Project
-        url={"https://app-music-rd.netlify.app/"}
-        name={"Music App"}
-        technologies={"React / Sass / Node / MongoDb"}
-      />
     </motion.section>
   );
 }
