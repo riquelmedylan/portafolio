@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
@@ -17,7 +16,7 @@ type GLTFResult = GLTF & {
 };
 
 export function MobyBlack(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("assets/mobyBlack.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF("/mobyBlack.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -69,4 +68,4 @@ export function MobyBlack(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("assets/mobyBlack.gltf");
+useGLTF.preload("/mobyBlack.gltf");

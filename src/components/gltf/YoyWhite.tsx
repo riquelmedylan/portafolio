@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
@@ -15,7 +14,7 @@ type GLTFResult = GLTF & {
 };
 
 export function YoyWhite(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("assets/yoyWhite.gltf") as GLTFResult;
+  const { nodes, materials } = useGLTF("/yoyWhite.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -49,4 +48,4 @@ export function YoyWhite(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("assets/yoyWhite.gltf");
+useGLTF.preload("/yoyWhite.gltf");
