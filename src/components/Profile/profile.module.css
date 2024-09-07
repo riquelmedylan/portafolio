@@ -1,0 +1,11 @@
+.name {
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.job {
+  font-weight: 600;
+  font-size: 12.5px;
+  color: var(--primary-color);
+}
